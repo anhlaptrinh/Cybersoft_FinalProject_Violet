@@ -1,9 +1,13 @@
 import AdminTemplate from "../pages/AdminPage";
+import { CustomRouteType } from "../types/CustomRouteType";
 
-export const AdminRoute=[
-    {
-        path: '/admin',
-        element: <AdminTemplate/>,
-        name: 'Admin',
-    }
-]
+export const AdminRoute: CustomRouteType[] = [
+  {
+    path: "/admin",
+    element: <AdminTemplate />,
+    children: [],
+    isProtected: true,
+    permissions: ["admin"],
+    redirectIfNoPermission: "/login",
+  },
+];

@@ -2,7 +2,7 @@
 
 export default function Headers() {
   return (
-    <div>
+    <div className="header-sticky">
       {/* <div id="preloder">
         <div className="loader"></div>
       </div> */}

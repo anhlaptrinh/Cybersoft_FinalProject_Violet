@@ -164,6 +164,10 @@ ol {
 	border: 2px solid $white-color;
 	border-radius: 50px;
 	text-transform: uppercase;
+	&:hover{
+		background-color: skyblue;
+		transition: all 0s !important;
+	}
 }
 
 .site-btn {
@@ -268,6 +272,7 @@ ol {
 	padding-bottom: 24px;
 	padding-left: 45px;
 	padding-right: 45px;
+	
 }
 
 .inner-header {
@@ -499,17 +504,7 @@ ol {
 		left: 110px;
 		bottom: 62px;
 	}
-	.owl-dots button {
-		display: inline-block;
-		height: 11px;
-		width: 11px;
-		background: #969D9E;
-		border-radius: 50%;
-		margin-right: 9px;
-		&.active {
-			background: $primary-color;
-		}
-	}
+	
 	.owl-nav button[type=button] {
 		display: inline-block;
 		height: 68px;
@@ -1925,6 +1920,12 @@ ol {
 }
 
 /* ---------------------------------- Responsive Media Styles ---------------------------------*/
+@media only screen and (min-width: 1536px) {
+	.fix-footer{
+		max-width: 1280px !important;
+	}
+
+}
 
 @media only screen and (min-width: 1500px) and (max-width: 1920px) {
 	.inner-header .user-access {
@@ -1935,6 +1936,9 @@ ol {
 		float: right;
 		margin-right: 238px;
 	}
+	.fix-footer-content{
+		max-width: 1140px !important;
+	}
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1340px) {
@@ -1944,6 +1948,7 @@ ol {
 	.inner-header .main-menu {
 		margin-right: 55px;
 	}
+	
 }
 
 /* Medium Device : 1280px */
@@ -2240,3 +2245,56 @@ ol {
     padding: 10px 0;
   }
 }
+
+//Ánh custom
+
+
+.single-slider-item {
+	background-size: cover;
+	background-position: center;
+	height: 90vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  
+	h1,
+	h2,
+	a {
+	  color: white;
+	  text-align: center;
+	  font-weight: bold;
+	}
+  }
+  
+ 
+  
+  /* Animation */
+  .animated {
+	animation-duration: 0.2s;
+	animation-fill-mode: both;
+  }
+  
+  @keyframes fadeIn {
+	from {
+	  opacity: 0;
+	  transform: translateY(100%);
+	}
+	to {
+	  opacity: 1;
+	  transform: translateY(20px);
+	}
+  }
+  
+  .fadeIn {
+	animation-name: fadeIn;
+  }
+
+  /* Sticky Header CSS */
+.header-sticky {
+	position: sticky;
+	top: 0;
+	z-index: 1000;  /* Make sure it stays on top of other content */
+	background-color: white;  /* Optional: Make sure the background is solid */
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  /* Optional: Add shadow for effect */
+  }
+  
