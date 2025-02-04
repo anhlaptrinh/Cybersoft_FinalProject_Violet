@@ -1,7 +1,10 @@
+import { Outlet } from "react-router-dom";
 
 
 export default function AuthenTemplate() {
   return (
-    <div>AuthenTemplate</div>
+    <div>
+      <Outlet/>
+    </div>
   )
 }

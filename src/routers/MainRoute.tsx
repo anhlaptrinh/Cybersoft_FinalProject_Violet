@@ -1,5 +1,9 @@
+
 import HomeTemplate from "../modules/HomeTemplate";
+
 import UserTemplate from "../pages/UserPage";
+import CartPage from "../pages/UserPage/CartPage";
+import ProductPage from "../pages/UserPage/ProductPage";
 import { CustomRouteType } from "../types/CustomRouteType";
 
 export const MainRoute: CustomRouteType[] = [
@@ -12,6 +16,20 @@ export const MainRoute: CustomRouteType[] = [
         element: <HomeTemplate />,
         isProtected: false,
       },
+
+      {
+        path: "/products",
+        element: <ProductPage/>,
+        isProtected: false,
+
+      },
+      {
+        path: "/cart",
+        element: <CartPage/>,
+        isProtected: false,
+      },
+      
+
     ],
     isProtected: false,
   },
